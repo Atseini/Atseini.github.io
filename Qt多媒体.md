@@ -163,6 +163,8 @@ QAudioFormat通常用于 **QAudioInput** 和 **QAudioOutput** 中
 
 	player = new QMediaPlayer;
 	playlist = new QMediaPlaylist；
+	playlist->addMedia(QUrl("http://fs.w.kugou.com/201803231448/c3604a69e0a2c65ebc38ed1e30f90d0e/G072/M09/08/03/iA0DAFeOfeeAarqXAFSP7PJLQeI779.mp3"));
+		//播放网络歌曲，此链接为使用chrome浏览器的Media资源的链接。
 	playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/晴天.mp3")));
 	playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/顽固.mp3")));
 	playlist->setCurrentIndex(0);	

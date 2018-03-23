@@ -178,17 +178,17 @@ QAudioFormat通常用于 **QAudioInput** 和 **QAudioOutput** 中
 		//会把 currentIndex 设为0。
 而把给 **QMediaPlaylist** 用**addMedia** 添加了内容后， 该playlist列表的 **CurrentIndex** 的内容均为 -1.而把 player 添加歌单后， **CurrentIndex** 值为0.
 
-    playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/七里香.mp3")));
-    playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/晴天.mp3")));
-    playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/星空.mp3")));
+	    playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/七里香.mp3")));
+	    playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/晴天.mp3")));
+	    playlist->addMedia(QMediaContent(QUrl::fromLocalFile("C:/Users/xiaweiyi123/Downloads/星空.mp3")));
 
-    qDebug()<<playlist->currentIndex();       //输出-1
-    playlist->setCurrentIndex(1);        
-    	//此语句没用，因为后面会把值重新设为0.
-    playlist->setPlaybackMode(QMediaPlaylist::Loop);
-    player->setPlaylist(playlist);
-    qDebug()<<playlist->currentIndex();
-    	//输出0
-    playlist->setCurrentIndex(1);
-    	//把CurrentIndex的值设为1，播放 晴天
-    player->play();		
+	    qDebug()<<playlist->currentIndex();       //输出-1
+	    playlist->setCurrentIndex(1);        
+		//此语句没用，因为后面会把值重新设为0.
+	    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+	    player->setPlaylist(playlist);
+	    qDebug()<<playlist->currentIndex();
+		//输出0
+	    playlist->setCurrentIndex(1);
+		//把CurrentIndex的值设为1，播放 晴天
+	    player->play();		

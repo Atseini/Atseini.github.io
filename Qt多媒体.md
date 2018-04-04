@@ -153,7 +153,6 @@ QAudioFormat通常用于 **QAudioInput** 和 **QAudioOutput** 中
 
 			//网上例程，未成功
 
-**WWWWWWWWWWWWWWWWWWW**
 
 ------------------------------------
 
@@ -172,6 +171,12 @@ QAudioFormat通常用于 **QAudioInput** 和 **QAudioOutput** 中
 	player->setPlaylist(playlist);
 	player->play();
 		
+- 这种方法播放网络歌曲，有问题。第二天执行程序显示：
+
+		Unresolved error code 0x800c0008 ()
+	
+		DirectShowPlayerService::doSetUrlSource: Unresolved error code 0x800c0008 ()
+
 ## CurrentIndex  问题
 
 不管之前的 CurrentIndex 为多少。
